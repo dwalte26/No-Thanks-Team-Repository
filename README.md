@@ -6,3 +6,6 @@
 * Kaitlyn Miller
 * Dustin Walters
 * Shane Gill
+
+## Additional Plugins Used
+* Bootstrap
