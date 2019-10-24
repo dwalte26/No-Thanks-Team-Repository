@@ -4,7 +4,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-<div class="container">
+<div class="wrapper">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -23,8 +23,19 @@
   </div>
 </nav>
 
-    <h5>Welcome to <strong style = "color: red">Ompany</strong></h5>
+
+    <h5>Welcome to <strong style = "color: red">Ompany Ncorporated</strong></h5>
+    
+    <div class="container">
+    <div class="loginForm form-group">
+      <label for="username">Username: </label>
+      <input type="text" class="form-control" id="username">
+      
+      <label for="password">Password: </label>
+      <input type="password" class="form-control" id="password">
+    </div><!-- loginForm"-->
     
     <%= link_to 'Login', controller: 'directory' %>
-</div> <!-- container -->
+    </div> <!-- container -->
+</div> <!-- wrapper -->
 
