@@ -9,4 +9,13 @@
     <th>ID</th>
     <th>Email</th>
     <th>Phone</th></tr>
+    <% @employees.each do |onboarding| %>
+    <tr>
+        <td><%= onboarding.name %></td>
+        <td><%= onboarding.position %></td>
+        <td><%= onboarding.employeeid %></td>
+        <td><%= onboarding.email %></td>
+        <td><%= onboarding.phone %></td>
+    </tr>
+    <% end %>
 </table>
