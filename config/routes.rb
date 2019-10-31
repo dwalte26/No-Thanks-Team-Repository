@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profiles/index'
   get 'welcome/index'
   
   resources :directory do
