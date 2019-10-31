@@ -1,6 +1,6 @@
 class DirectoryController < ApplicationController
     def show
-        @employee = Employee.find(params[:id])
+        @employee = Employee.find(params[:employeeid])
     end
     def index
         @employees = Employee.all

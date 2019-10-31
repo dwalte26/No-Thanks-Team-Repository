@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_172443) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+ActiveRecord::Schema.define(version: 2019_10_31_170541) do
 
   create_table "onboardings", force: :cascade do |t|
     t.string "name"

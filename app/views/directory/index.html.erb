@@ -1,2 +1,17 @@
 <h1>Directory!</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+  </tr>
+ 
+  <% @employees.each do |employee| %>
+    <tr>
+      <td><%= employee.name %></td>
+      <td><%= employee.phone %></td>
+      <td><%= employee.email %></td>
+    </tr>
+  <% end %>
+</table>
 <%= link_to 'ADMIN', controller: 'onboarding' %>
