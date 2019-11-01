@@ -4,7 +4,20 @@ class EmployeeController < ApplicationController
     def index
     end
     def create
-        render plain: params[:employee].inspect
+        @employee =Employee.new(employee_params)
+        
+        @employee.save
+        redirect_to @employee
     end 
+    def show
+        @employee = Employee.find(params[:id])
+    end 
+    
 
 end
+
+private
+    def employee_params
+        params.require(:employee).permit(:name, :position, 
+                                            :employeeid, :email, :phone)
+    end
