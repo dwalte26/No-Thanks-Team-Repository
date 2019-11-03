@@ -3,7 +3,7 @@ class EmployeeController < ApplicationController
         @employee = Employee.all
     end
     def show
-        @employee = Employee.find(params[:id])
+       @employee = Employee.find(params[:id])
     end 
     def new
         @employee = Employee.new
