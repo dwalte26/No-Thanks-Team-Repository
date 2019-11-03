@@ -12,15 +12,22 @@ class EmployeeController < ApplicationController
         @employee =Employee.new(employee_params)
         
         if @employee.save
-            redirect_to @employee_index_path
+            redirect_to @employee
         else
             render 'new'
         end
-        
     end 
-    
-    
-
+    def edit
+        @employee = Employee.find(params[:id])
+    end    
+    def update
+        @employee = Employee.find(params[:id])
+        if @employee.update(employee_params)
+            redirect_to @employee
+        else
+            render 'edit'
+        end
+    end
 end
 
 private
