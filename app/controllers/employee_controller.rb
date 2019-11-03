@@ -2,6 +2,7 @@ class EmployeeController < ApplicationController
     def new
     end
     def index
+        @employee = Employee.all
     end
     def create
         @employee =Employee.new(employee_params)

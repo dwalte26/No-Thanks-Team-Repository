@@ -1,0 +1,27 @@
+<h1>Employee Onboarding</h1>
+<%= form_for :employee, url: employee_index_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :position %><br>
+    <%= f.text_area :position %>
+  </p>
+ <p>
+    <%= f.label :employeeid %><br>
+    <%= f.text_area :employeeid %>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_area :email %>
+  </p>
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.text_area :phone %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
