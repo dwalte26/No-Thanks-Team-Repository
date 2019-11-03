@@ -28,6 +28,12 @@ class EmployeeController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+        @employee = Employee.find(params[:id])
+        @employee.destroy
+        
+        redirect_to employee_index_path
+    end
 end
 
 private
