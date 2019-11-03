@@ -1,18 +1,24 @@
 class EmployeeController < ApplicationController
-    def new
-    end
     def index
         @employee = Employee.all
+    end
+    def show
+        @employee = Employee.find(params[:id])
+    end 
+    def new
+        @employee = Employee.new
     end
     def create
         @employee =Employee.new(employee_params)
         
-        @employee.save
-        redirect_to @employee
+        if @employee.save
+            redirect_to @employee_index_path
+        else
+            render 'new'
+        end
+        
     end 
-    def show
-        @employee = Employee.find(params[:id])
-    end 
+    
     
 
 end
