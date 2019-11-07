@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Employee Onboarding</h1>
 <%= form_for :employee, url: employee_index_path do |f| %>
     <% if @employee.errors.any? %>
@@ -39,4 +40,8 @@
     <%= f.submit %>
   </p>
 <% end %>
+=======
+<h1 class="text-center">Employee Onboarding</h1>
+  <%= render 'form' %>
+>>>>>>> 3a2ef6abe56563a3426cb70b4fdc8020a424ad99
 <%=link_to 'Back', employee_index_path %>
