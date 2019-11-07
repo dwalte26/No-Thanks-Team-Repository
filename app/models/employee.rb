@@ -3,5 +3,5 @@ class Employee < ApplicationRecord
     validates :position, presence: true
     validates :employeeid, presence: true
     validates :email, presence: true
-    validates :phone2, presence: true
+    validates :phone, presence: true
 end
