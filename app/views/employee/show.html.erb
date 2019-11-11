@@ -18,4 +18,30 @@
     <strong>Phone:</strong>
     <%= @employee.phone %>
 </p>
+
+<h2>Projects</h2>
+<% @employee.projects.each do |project| %>
+    <p>
+        <strong>Title:</strong>
+        <%= project.title %>
+    </p>
+    <p>
+        <strong>Project Description:</strong>
+        <%= project.body %>
+    </p>
+<% end %>
+<h2>Add a project:</h2>
+<%= form_for([@employee, @employee.projects.build]) do |f| %>
+<p>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %>
+</p>
+<p>
+    <%= f.label :body %> <br>
+     <%= f.text_area :body %>
+</p>
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
 <%= link_to 'Employees', employee_index_path %>
