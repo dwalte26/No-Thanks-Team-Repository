@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  resources :employee
+  resources :employee do
+    resources :projects
+  end
   resources :application
   
   root 'welcome#index'
