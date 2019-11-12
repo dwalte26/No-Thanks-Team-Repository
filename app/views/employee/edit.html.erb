@@ -1,5 +1,4 @@
 <h1 class="text-center">Edit an Employee</h1>
-  <h1 class="text-center">Employee Onboarding</h1>
   <%= form_for :employee, method: :patch, url: employee_path do |f| %>
     <% if @employee.errors.any? %>
     <div id="error_explanation" class="alert alert-danger">
