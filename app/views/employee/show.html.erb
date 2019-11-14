@@ -1,47 +1,55 @@
-<p>
-    <strong>Name:</strong>
-    <%= @employee.name %>
-</p>
-<p>
-    <strong>Position:</strong>
-    <%= @employee.position %>
-</p>
-<p>
-    <strong>Employee Id:</strong>
-    <%= @employee.employeeid %>
-</p>
-<p>
-    <strong>Email:</strong>
-    <%= @employee.email %>
-</p>
-<p>
-    <strong>Phone:</strong>
-    <%= @employee.phone %>
-</p>
-
-<h2>Projects</h2>
-<% @employee.projects.each do |project| %>
+<div class="container-fluid">
+    <div class="row text-center lead display-4 pb-3">
+        <div class="col-lg">
+        <%= @employee.name %>
+        </div> <!-- col-lg -->
+    </div> <!-- row text-center lead -->
+    <div class="col-lg-8">
+        <div class="row">
+            <img src="https://via.placeholder.com/200" class="rounded-circle">
+    </div> <!-- col-lg-8 text-center -->
+    <div class="col-lg-4">
+            <strong>Position:</strong>
+            <%= @employee.position %>
+        </div>
+    </div> <!-- col-lg-4 -->
     <p>
-        <strong>Title:</strong>
-        <%= project.title %>
+        <strong>Employee Id:</strong>
+        <%= @employee.employeeid %>
     </p>
     <p>
-        <strong>Project Description:</strong>
-        <%= project.body %>
+        <strong>Email:</strong>
+        <%= @employee.email %>
     </p>
-<% end %>
-<h2>Add a project:</h2>
-<%= form_for([@employee, @employee.projects.build]) do |f| %>
-<p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-</p>
-<p>
-    <%= f.label :body %> <br>
-     <%= f.text_area :body %>
-</p>
-<p>
-    <%= f.submit %>
-</p>
-<% end %>
-<%= link_to 'Employees', employee_index_path %>
+    <p>
+        <strong>Phone:</strong>
+        <%= @employee.phone %>
+    </p>
+    
+    <h2>Projects</h2>
+    <% @employee.projects.each do |project| %>
+        <p>
+            <strong>Title:</strong>
+            <%= project.title %>
+        </p>
+        <p>
+            <strong>Project Description:</strong>
+            <%= project.body %>
+        </p>
+    <% end %>
+    <h2>Add a project:</h2>
+    <%= form_for([@employee, @employee.projects.build]) do |f| %>
+    <p>
+        <%= f.label :title %> <br>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :body %> <br>
+         <%= f.text_area :body %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+    <% end %>
+    <%= link_to 'Employees', employee_index_path %>
+</div><!-- container -->
