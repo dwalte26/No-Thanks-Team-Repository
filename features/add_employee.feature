@@ -6,6 +6,7 @@ Feature: Add a new employee
   
 Scenario: As a user I want to be able to navigate from the home page to the directory page
   Given I am on the home page
+  Then I should see the "Username" field
   When I click on the "Login" link
   Then I should be on the "Employees" page
   When I click on the "New Employee" link
