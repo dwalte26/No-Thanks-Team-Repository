@@ -18,6 +18,10 @@ Given("I am on the onboarding page") do
   visit new_employee_path
 end
 
+Given("I am on the directory page") do
+  visit employee_index_path
+end
+
 Then("I enter {string} for {string}") do |string, string2|
     fill_in string2, with: string
 end
