@@ -10,6 +10,12 @@ Scenario: As a user I want to be able to navigate from the home page to the empl
   When I click on the "Login" link
   Then I should be on the "Employees" page
   
-Scenario: As a user I want to be able to edit an employee
-  Given I am on the directory page
+Scenario: As the HR rep, I should be able to select an employee and change their info
   
+  Given I am on the directory page
+  Then I should see the name "Test"
+  Then I click on the "Edit" link
+  Then I should be on the "Edit an Employee" page
+  Then I should change "123-456-789" to "098-765-4321"
+  When I click on the "Save Employee!" button
+  Then I should be on the "Test" page

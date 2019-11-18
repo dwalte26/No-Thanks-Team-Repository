@@ -29,3 +29,19 @@ end
 Then("I click on the {string} button") do |string|
   click_button(string)
 end
+
+Then("I should see the {string} button") do |string|
+  find_button(string).click
+end
+
+Before do
+  Employee.create(name: "Test", position: "Tester", employeeid: "30", email: "tester123@testing.com", phone: "123-456-789")
+end
+
+Then("I should change {string} to {string}") do |string1, string2| 
+  string1.replace(string2)
+end
+
+Then("I should see the name {string}") do |string|
+  expect(page).to have_content (string)
+end
