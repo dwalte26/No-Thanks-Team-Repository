@@ -10,7 +10,7 @@ class EmployeeController < ApplicationController
         @employee = Employee.new
     end
     def create
-        @employee =Employee.new(employee_params)
+        @employee = Employee.new(employee_params)
         
         if @employee.save
             redirect_to @employee
@@ -40,5 +40,6 @@ end
 private
     def employee_params
         params.require(:employee).permit(:name, :position, 
-                                            :employeeid, :email, :phone)
+                                            :employeeid, :email, 
+                                            :phone, :password, :password_confirmation)
     end
