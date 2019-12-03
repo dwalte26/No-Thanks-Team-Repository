@@ -3,22 +3,26 @@
     <h5>Welcome to <strong style = "color: red">Ompany Ncorporated</strong></h5>
     
     <div class="container">
-    <div class="loginForm form-group">
-      <label for="username">Username: </label>
-      <input type="text" class="form-control" id="username">
-      
-      <label for="password">Password: </label>
-      <input type="password" class="form-control" id="password">
-    </div><!-- loginForm"-->
-    <%= link_to 'Login', controller: 'employee' %>
-    <p>
-   <%if current_user%>
-     Logged in as <%= current_user.name%>
-     <%=link_to "Log Out", logout_path%>
+   <%if current_employee%>
+     Logged in as <%= current_employee.name%>
+     <%=link_to "Log Out", logout_path%><br>
+     <%=link_to "Directory", employee_index_path%>
    <%else%>
-     <%=link_to "Sign Up", new_path%> or
-     <%=link_to "Log in", login_path%>
+     <%= form_tag sessions_path do |form| %>
+    <div class="field">
+        <%= label_tag :email%>
+        <%= text_field_tag :email%>
+    </div>
+   <div class="field">
+        <%= label_tag :password%>
+        <%= password_field_tag :password%>
+    </div>
+    <div class="actions">
+        <%= submit_tag "Login"%>
+    </div>
    <%end%>
+   <%end%>
+   
 </p>
 
     </div> <!-- container -->

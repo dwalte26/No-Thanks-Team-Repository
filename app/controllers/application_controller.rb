@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user
-    def current_user
-        if session[:user_id]
-            @current_user ||= User.find(session[:user_id])
+    helper_method :current_employee
+    def current_employee
+        if session[:employee_id]
+            @current_employee ||= Employee.find(session[:employee_id])
         else
-            @current_user = nil
+            @current_employee = nil
         end
     end
 end
