@@ -47,5 +47,5 @@ private
     def employee_params
         params.require(:employee).permit(:name, :position, 
                                             :employeeid, :email, 
-                                            :phone, :password, :password_confirmation)
+                                            :phone, :password)
     end
